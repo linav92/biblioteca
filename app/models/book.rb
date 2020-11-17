@@ -1,5 +1,5 @@
 class Book < ApplicationRecord
-    validates  :title, :author, :status, presence: true
+    validates  :title, :author, presence: true
 
-    enum status: [:Prestado, :En_estante]
+    enum status: {Prestado: 0, En_estante: 1}
 end
