@@ -1,0 +1,7 @@
+<p><%= @book.title %></p>
+<p><%= @book.author %></p>
+<p><%= @book.status %></p>
+<p><%= distance_of_time_in_words(Time.now, @book.lendend_at) %></p>
+<p><%= distance_of_time_in_words(Time.now, @book.returned_at) %></p>
+<%= link_to 'Editar', edit_book_path(@book) %> |
+<%= link_to 'Volver', books_path %>
