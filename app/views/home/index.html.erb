@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <div class="jumbotron" >
+            <h1 class="display-4">Mi biblioteca</h1>
+            <hr class="my-4">
+            <p>¡Todos mis libros en estante!</p>
+            <%= link_to 'Administrar Libros', books_path %>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <% @books.each do |book| %>
+        <div class="row">
+            <div class="col-md-12">
+                <h3><%= book.title%></h3>
+            </div>
+            <div class="col-md-12 small">
+                <span><strong>Autor:</strong> <span class="font-weight-light">
+                        <%= book.author %></span></span>
+                <span><strong>Fecha de devolución </strong> <span class="font-weight-light"><%=book.returned_at %></span></span>
+            </div>
+        </div>
+        <% end %>
+    </div>
+</div>
+

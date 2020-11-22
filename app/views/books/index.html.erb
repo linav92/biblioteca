@@ -15,7 +15,7 @@
              <tr>
                 <th scope="col"><%= sort_link(@q, :id) %></th>
                 <th scope="col"><%= sort_link(@q, :title) %></th>
-                <th scope="col">Autor/th>
+                <th scope="col">Autor</th>
                 <th scope="col">Estado</th>
                 <th scope="col">Fecha de Préstamo</th>
                 <th scope="col">Fecha de Devolución</th>
@@ -38,4 +38,5 @@
     </div>
 </table>
 <br>
-<%= link_to 'Nuevo libro', new_book_path %>
+<%= link_to 'Nuevo libro', new_book_path %> |
+<%= link_to 'Volver al inicio', root_path %>
